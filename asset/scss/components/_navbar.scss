@@ -1,0 +1,81 @@
+/*=============== HEADER ===============*/
+.header{
+    position: fixed;
+    width: 100%;
+    transition: .4s;
+}
+
+/*=============== NAV ===============*/
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__logo{
+        color: var(--title-color);
+        font-weight: 600;
+    }
+
+    @media screen and (max-width: 767px){
+        justify-content: center;
+
+        &__menu{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.445);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            -webkit-backdrop-filter: blur(5px);
+            height: 5rem;
+            padding: 0 1rem;
+            display: grid;
+            align-content: center;
+            border-radius: 1.25rem;
+            transition: .4s;
+            margin: 30px;
+        }
+    }
+
+    &__list,
+    &__link{
+        display: flex;
+    }
+
+    &__link{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 4px;
+        color: var(--title-color);
+        font-weight: 600;
+    }
+
+    &__list{
+        justify-content: space-around;
+    }
+    &__name{
+        font-size: var(--tiny-font-size);
+    }
+    &__icon{
+        font-size: 1.5rem;
+    }
+
+}
+
+/*Active link*/
+.active-link{
+    position: relative;
+    color: var(--first-color);
+    transition: .3s;
+}
+
+/* Change background header */
+.scroll-header{
+    box-shadow: 0 0 0 hsla(var(--hue), var(--sat), 15%, 0.15);
+    // background: rgba(255, 255, 255, 0.445);
+    // backdrop-filter: blur(5px);
+    // -webkit-backdrop-filter: blur(5px);
+}
